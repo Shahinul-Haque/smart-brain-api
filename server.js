@@ -13,7 +13,7 @@ const db = knex({
 
     client: 'pg',
     connection: {
-    host : '127.0.0.1',
+    host : ' postgresql-globular-38582',
     user : 'postgres',
     password : 12345,
     database : 'smart-brain'
@@ -57,7 +57,7 @@ app.get('/',(req,res) => {res.send('Its working !')})
 
 app.post('/signin',(req,res) => { signin.handleSignin(req,res,db,bcrypt)})
 
-app.post('/register',(req,res) => { register.handleRegister(req,res,db,bcrypt) })
+app.post('/register',(req,res) => { register.handleRegister(req,res,db,bcrypt) })  
 
 app.get('/profile/:id',(req,res) => {profile.handleProfile(req,res,db)})
   
